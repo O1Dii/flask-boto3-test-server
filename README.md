@@ -3,5 +3,6 @@ Steps required to run:
 
 * install dependencies using
 > pip install -r requirements.txt
+* create .env file filling in missing fields from .env.template file
 * run with
 > flask run
