@@ -17,12 +17,7 @@ def df_with_floats():
 # ]))
 def test_sum(monkeypatch, df_with_floats):
     with monkeypatch.context() as context:
-        def read_csv_mock(*args):
-            return df_with_floats
-
-        context.setattr(pd, 'read_csv', read_csv_mock)
-
-        result = df_sum()
+        result = df_sum(df_with_floats)
 
     assert len(result.columns) == 3
     assert result['3'].dtype == 'int'
