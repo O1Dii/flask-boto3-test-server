@@ -6,3 +6,7 @@ Steps required to run:
 * create .env file filling in missing fields from .env.template file
 * run with
 > flask run
+
+To run tests use
+> python -m pytest
+
